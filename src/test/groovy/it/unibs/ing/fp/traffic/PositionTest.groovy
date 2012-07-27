@@ -18,4 +18,32 @@ class PositionTest {
 		assert 4 == q.x
 		assert 8 == q.y
 	}
+	
+	@Test
+	def void givenDifferentXsThenEqualsIsFalse() {
+		def p = [x: 3, y: 5] as Position
+		def q = [x: 4, y: 5] as Position
+		assert p != q
+	}
+	
+	@Test
+	def void givenDifferentYsThenEqualsIsFalse() {
+		def p = [x: 4, y: 7] as Position
+		def q = [x: 4, y: 5] as Position
+		assert p != q
+	}
+	
+	@Test
+	def void givenDifferentXsAndYsThenEqualsIsFalse() {
+		def p = [x: 2, y: 7] as Position
+		def q = [x: 4, y: 5] as Position
+		assert p != q
+	}
+	
+	@Test
+	def void givenIdenticalXsAndYsThenEqualsIsTrue() {
+		def p = [x: 4, y: 7] as Position
+		def q = [x: 4, y: 7] as Position
+		assert p == q
+	}
 }

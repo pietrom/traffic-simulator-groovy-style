@@ -14,4 +14,8 @@ class Position {
 	private Position move(Closure deltaX, Closure deltaY) {
 		return new Position(x: deltaX(x), y: deltaY(y))
 	}
+	
+	public boolean equals(Position that) {
+		return this.x == that.x && this.y == that.y
+	}
 }
