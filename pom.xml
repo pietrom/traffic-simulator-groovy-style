@@ -100,7 +100,7 @@
 	<distributionManagement>
 		<repository>
 			<id>distribution-maven-repository</id>
-			<url>${local-publish-repository}</url>
+			<url>${local-deploy-repository}</url>
 		</repository>
 	</distributionManagement>
 </project>
