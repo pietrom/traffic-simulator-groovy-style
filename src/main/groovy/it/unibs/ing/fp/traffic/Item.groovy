@@ -1,5 +1,9 @@
 package it.unibs.ing.fp.traffic
 
-interface Item {
-	def Position moveFrom(Position p)
+abstract class Item {
+	def abstract Position moveFrom(Position p)
+	
+	def boolean canOverwrite(Item item) {
+		false
+	}
 }
